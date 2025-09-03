@@ -6,18 +6,22 @@
 /*# means id*/
 /*.name means class*/
 
+/*Prefer class for most styling and layout. Use id only when necessary for unique elements.*/
+
 
 /**********   Crearing Color Variables   **********/
 :root{
     --dark-pink: hsl(313, 63%, 36%);
     --light-pink: rgb(255, 138, 228);
     --med-pink: rgb(216, 74, 183);
+    --bg-color: rgb(255, 255, 255);
 }
 
 body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: var(--bg-color);
 }
 
 
@@ -39,7 +43,7 @@ body{
 }
 
 
-#main {
+.main {
   position: relative;
   text-align: center;
   max-width: 1080px;
@@ -52,31 +56,43 @@ p {
 }
 
 /* Changing color of the DES 070 Labs link */
-#head h2 a{
+.head h2 a{
     color: var(--med-pink);
     text-decoration: none;
     font-size: 30px;
+
+    
+    
 }
 
-#main h1{
+.head{
+  a:hover {
     color: var(--light-pink);
+    text-decoration: none;
+  }
 }
 
-#post {
+.main h1{
+    color: var(--light-pink);
+  
+}
+
+.post {
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* or center, if you want centered content */
     border: 5px solid var(--med-pink); /* Add this line for a colored border */
     padding: 10px; /* Optional: adds space inside the border */
     border-radius: 4px; /* Optional: rounded corners */
+    margin-bottom: 20px; /* Adds space below each post */
 }
 
-#post h2{
+.post h2{
     color: var(--dark-pink);
     font-weight: bold;
     font-family: "League Spartan", sans-serif;
 }
-#post a {
+.post a {
     color: var(--med-pink);
     text-decoration: none;
 }
@@ -90,4 +106,33 @@ footer {
     margin-bottom: 0;
     flex-shrink: 0;
     font-family: "League Spartan", sans-serif;
+}
+
+.post{
+  img{
+    max-width: 500px;
+    height: auto;
+   
+  }
+  a{
+    color: var(--med-pink);
+    text-decoration: none;
+  }
+  a:hover {
+    color: var(--light-pink);
+    text-decoration: none;
+  }
+}
+
+.special-headline {
+  color: var(--dark-pink);
+  font-weight: bold;
+  font-family: "League Spartan", sans-serif;
+}
+
+#post{
+  background-color: rgb(81, 31, 124);
+  color:rgb(207, 151, 255);
+  margin-bottom: 1em;
+  padding: .5em 1em;
 }
