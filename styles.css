@@ -1,0 +1,93 @@
+/*NOTES TO SELF*/
+/*
+-Test display: flex in #head
+*/
+
+/*# means id*/
+/*.name means class*/
+
+
+/**********   Crearing Color Variables   **********/
+:root{
+    --dark-pink: hsl(313, 63%, 36%);
+    --light-pink: rgb(255, 138, 228);
+    --med-pink: rgb(216, 74, 183);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+
+/********** FONTS **********/
+/**********   LEAGUE SPARTAN   **********/
+.league-spartan-unique {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+/**********   PRESS START 2P   **********/
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+#main {
+  position: relative;
+  text-align: center;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 20px;
+  color: var(--med-pink);
+}
+
+/* Changing color of the DES 070 Labs link */
+#head h2 a{
+    color: var(--med-pink);
+    text-decoration: none;
+    font-size: 30px;
+}
+
+#main h1{
+    color: var(--light-pink);
+}
+
+#post {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* or center, if you want centered content */
+    border: 5px solid var(--med-pink); /* Add this line for a colored border */
+    padding: 10px; /* Optional: adds space inside the border */
+    border-radius: 4px; /* Optional: rounded corners */
+}
+
+#post h2{
+    color: var(--dark-pink);
+    font-weight: bold;
+    font-family: "League Spartan", sans-serif;
+}
+#post a {
+    color: var(--med-pink);
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    justify-content: center;
+    font-size: 15px;
+    color: var(--dark-pink);
+    margin-top: 20px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+    font-family: "League Spartan", sans-serif;
+}
