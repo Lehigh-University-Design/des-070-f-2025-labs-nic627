@@ -136,3 +136,10 @@ footer {
   margin-bottom: 1em;
   padding: .5em 1em;
 }
+
+.center-img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:70%;
+}
