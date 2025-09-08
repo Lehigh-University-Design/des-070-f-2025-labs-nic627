@@ -12,7 +12,7 @@
 /**********   Crearing Color Variables   **********/
 :root{
     --dark-pink: hsl(313, 63%, 36%);
-    --light-pink: rgb(255, 138, 228);
+    --light-pink: rgb(255, 157, 216);
     --med-pink: rgb(216, 74, 183);
     --bg-color: rgb(255, 255, 255);
 }
@@ -53,6 +53,7 @@ body{
 p {
   font-size: 20px;
   color: var(--med-pink);
+  font-family: "League Spartan", sans-serif;
 }
 
 /* Changing color of the DES 070 Labs link */
@@ -80,11 +81,11 @@ p {
 .post {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* or center, if you want centered content */
-    border: 5px solid var(--med-pink); /* Add this line for a colored border */
-    padding: 10px; /* Optional: adds space inside the border */
-    border-radius: 4px; /* Optional: rounded corners */
-    margin-bottom: 20px; /* Adds space below each post */
+    align-items: flex-start; 
+    border: 5px solid var(--med-pink); 
+    padding: 10px; 
+    border-radius: 4px; 
+    margin-bottom: 20px;
 }
 
 .post h2{
@@ -128,13 +129,21 @@ footer {
   color: var(--dark-pink);
   font-weight: bold;
   font-family: "League Spartan", sans-serif;
+  text-decoration: underline;
+  text-align: left;
 }
 
 #post{
   background-color: rgb(81, 31, 124);
-  color:rgb(207, 151, 255);
   margin-bottom: 1em;
-  padding: .5em 1em;
+  font-family: "League Spartan", sans-serif;
+  h2 {
+    color: var(--light-pink);
+  }
+  p{
+    font-family: "League Spartan", sans-serif;
+    color: var(--light-pink);
+  }
 }
 
 .center-img{
@@ -142,4 +151,156 @@ footer {
   margin-left: auto;
   margin-right: auto;
   width:70%;
+}
+
+.sub-head{
+  font-family: "League Spartan", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  color: var(--med-pink)
+}
+
+.highlight {
+  background-color: var(--light-pink);
+  border-color: var(--dark-pink);
+
+  h2 {
+    color: var(--dark-pink);
+  }
+  p{
+    font-family: "League Spartan", sans-serif;
+    color: var(--dark-pink);
+  }
+}
+
+#rounded-corners{
+  border-radius: 15px;
+}
+
+/*Lab 2 Exercise: Display & Positioning*/
+/* Hide-me class to hide elements */
+.hide-me {
+  display: none;
+}
+
+h3 {
+  color: var(--med-pink);
+  font-family: "League Spartan", sans-serif;
+}
+
+.block-div, .block{
+  display: block;
+  width: 90%;
+  border: 5px solid var(--med-pink);
+  padding: 5px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--light-pink);
+  p{
+    color: var(--dark-pink)
+  }
+}
+.block{
+  margin: 0;
+}
+
+.inline{
+  display: inline;
+}
+
+.inline-block{
+  display: inline-block;
+  width: auto;
+  border: 5px solid var(--med-pink);
+  padding: 5px;
+  margin-bottom: 10px;
+  background-color: var(--light-pink);
+  transform: rotate(5deg);
+  p{
+    color: var(--dark-pink)
+  }
+}
+
+.post span{
+  color:rgb(191, 0, 255)
+}
+
+.static{
+  position: static;
+  border: 5px solid var(--med-pink);
+}
+
+.fixed{
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 200px;
+  border: 5px solid var(--med-pink);
+  background-color: var(--light-pink);
+  p{
+    color: var(--dark-pink)
+  }
+}
+
+.relative{
+  position: relative;
+  top: 10px;
+  left: 10px;
+  border: 5px solid var(--med-pink);
+  background-color: var(--light-pink);
+  p{
+    color: var(--dark-pink)
+  }
+}
+
+.absolute {
+  position: relative;
+  width: 200px;      /* Set the size of the container */
+  height: 200px;     /* Make it square */
+  margin: 40px auto; /* Center on page (optional) */
+  border: 5px solid var(--med-pink);
+  background-color: var(--light-pink);
+}
+
+.absolute-bubble {
+  position: absolute;
+  top: 50%;           /* Center vertically */
+  left: 50%;          /* Center horizontally */
+  width: 100px;       /* Circle diameter */
+  height: 100px;      /* Circle diameter */
+  border-radius: 50%; /* Make it a circle */
+  background: var(--med-pink);
+  transform: translate(-50%, -50%); /* Perfectly center the bubble */
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  max-height: 300px;   /* Set your preferred height */
+  overflow-y: auto;    /* Enables vertical scrolling */
+  background: var(--light-pink); /* Optional: for visibility */
+  padding: 10px;       /* Optional: for spacing */
+  border: 2px solid var(--med-pink); /* Optional: for visibility */
+}
+.sticky-bit{
+  top: 0;
+  border: 5px solid var(--med-pink);
+  background-color: var(--light-pink);
+}
+
+.float{
+  border: 1px solid var(--med-pink);
+  padding: 0 1em; 
+  margin-bottom: 1em;
+  .img-right{
+    float: right;
+    width: 200px;
+    height: auto;
+    margin: 1em 1em 1em 0;
+  }
+  .img-left{
+    float: left;
+    margin: 0 1em 1em 0;
+  }
 }
