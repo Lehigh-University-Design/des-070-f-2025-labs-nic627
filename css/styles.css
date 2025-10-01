@@ -11,7 +11,7 @@
 
 /**********   Crearing Color Variables   **********/
 :root{
-    --dark-pink: hsl(313, 63%, 36%);
+    --dark-pink: rgb(150, 34, 125);
     --light-pink: rgb(255, 157, 216);
     --med-pink: rgb(216, 74, 183);
     --bg-color: rgb(255, 255, 255);
@@ -303,4 +303,250 @@ h3 {
     float: left;
     margin: 0 1em 1em 0;
   }
+}
+
+
+/*-----------------------------------------*/
+
+/*Lab 3*/ 
+
+.grid-parent{
+  display: grid; 
+  /*The children with the layout for fr*/ 
+  grid-template-columns: 1fr 1fr 4fr 1fr;
+  gap: 2em; 
+  margin-bottom: 1em;
+}
+
+.grid-child{
+  padding: 5em;
+  min-height: 20vh; 
+  background-color: rgb(73, 72, 70);
+  color:white;
+  align-content: center;
+  font-family: "League Spartan", sans-serif;
+}
+
+/*Explicit*/
+.grid-layout-parent{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 2fr;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.grid-layout-chess{
+  width:100%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  margin-bottom: 1em;
+}
+
+.grid-child-chess{
+  aspect-ratio: 1;
+  background-color: rgb(152, 37, 91);
+  transition: 0.5s;
+  color: white;
+  font-family: "League Spartan", sans-serif;
+   align-content: center;
+  
+}
+.grid-child-chess:nth-child(-n + 8):nth-child(even),
+.grid-child-chess:nth-child(n + 8):nth-child(-n + 16):nth-child(odd),
+.grid-child-chess:nth-child(n + 17):nth-child(-n + 24):nth-child(even),
+.grid-child-chess:nth-child(n + 25):nth-child(-n + 32):nth-child(odd),
+.grid-child-chess:nth-child(n + 33):nth-child(-n + 40):nth-child(even),
+.grid-child-chess:nth-child(n + 41):nth-child(-n + 48):nth-child(odd),
+.grid-child-chess:nth-child(n + 49):nth-child(-n + 56):nth-child(even),
+.grid-child-chess:nth-child(n + 57):nth-child(-n + 64):nth-child(odd) {
+    background-color: hsl(342, 100%, 77%)
+}
+
+.grid-child-chess:hover {
+  background-color: rgb(255, 255, 255) !important;
+  transform: rotateX(180deg);
+}
+
+.grid-assign-parent {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 2em;
+  margin-bottom: 1em;
+}
+
+.grid-assign-child {
+  min-height: 1em;
+  background-color: #333333;
+}
+
+.grid-assign-special-child {
+  grid-row: 2 / 4; /*start at row 2 and go to row 4 */
+  grid-column: 2 / 4; /*start at column 2 and go to column 4 */
+  background-color: rgb(255, 164, 206);
+}
+
+.grid-area-parent {
+  width:100%;
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  gap: 1em;
+  margin-bottom: 1em;
+  grid-template-areas:
+    'sidebar header'
+    'sidebar main';
+    /* notice how it looks like the grid, visually */
+}
+
+.grid-area-child {
+  min-height: 1em;
+  background-color: #333333;
+}
+
+.area-header {
+  grid-area: header;
+}
+
+.area-sidebar {
+  grid-area: sidebar;
+}
+
+.area-main {
+  grid-area: main;
+}
+
+.grid-alignment-parent {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center; /* start, center, end, space-between, space-around, space-evenly  */
+  justify-items: center; /* stretch, start, center, end */
+  align-content: center; /* start, center, end, space-between, space-around, space-evenly  */
+  align-items: center; /* stretch, start, center, end */
+  gap: 1em;
+  margin-bottom: 1em;
+  background-color: #74345d;
+  min-height: 15em;
+}
+
+.grid-alignment-child {
+  width: 100px;
+  min-height: 1em;
+  background-color: #be74a0;
+  color: white;
+  font-family: "League Spartan", sans-serif;
+  
+}
+
+.quick-center-trick {
+  width: 100%;
+  height: 60vh;
+  background-color: #ff9ecd;
+  display: grid;
+  place-content: center; /*start, center, end (shorthand for justify-content with align-content)*/
+}
+
+.artistcontainer{
+  display: grid;
+  grid-template-columns: 2em ;
+}
+
+.artistinfo {
+
+}
+
+.artistinfo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/*Flex Lab*/
+
+.flex-container-justify {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  /*justify-content: start;
+  justify-content: end;
+  justify-content: flex-start;
+  justify-content: flex-end;
+  justify-content: left;
+  justify-content: right;*/
+}
+
+.flex-container-align {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 60vh;
+  align-items: flex-start;
+  justify-content: center;
+  /*align-items: start;
+  align-items: end;
+  align-items: flex-start;
+  align-items: flex-end;
+  align-items: left;
+  align-items: right;*/
+
+  /*note: you can comnbine align-items with justify-content
+  justify-content: left;
+  */
+
+  /*flex-direction: row;*/
+  /*flex-direction: row-reverse;*/
+  /*flex-direction: column;*/
+  /*flex-direction: column-reverse;*/
+
+}
+
+.flex-item {
+  width: 100px;
+  background-color:hsl(319, 52%, 70%);
+  margin: 1em;
+  padding: 1em;
+}
+
+/*
+.flex-container-align > .flex-item:nth-child(even) {
+  align-self: flex-end;
+  background-color: lightcoral; 
+}
+*/
+
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.flex-card {
+  width: calc(100%/2);
+  display: flex;
+}
+
+.flex-card-inner {
+  margin: 1em;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(255, 233, 249);
+  flex-direction: column;
+  text-align: center;
+  h4{
+    background-color: black;
+    display: inline-block;
+    color: #fff;
+    padding: .25em;
+  }
+  img {
+    border-radius: 50%;
+  }
+}
+
+.flex-card-inner > div:nth-child(2) {
+  flex-grow: 1;
 }
